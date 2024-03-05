@@ -1,4 +1,4 @@
-package cydeo.stereotype_annotation;
+package com.cydeo;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -7,8 +7,10 @@ public class CydeoApp {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(ConfigCourse.class);
-        context.getBean(Java.class).getTeachingHours();
+        ApplicationContext container = new AnnotationConfigApplicationContext(ConfigApp.class);
 
+        Java java = container.getBean(Java.class);
+
+        java.getTeachingHours();
     }
 }
