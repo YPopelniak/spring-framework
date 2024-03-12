@@ -1,5 +1,6 @@
 package com.cydeo.controller;
 
+import com.cydeo.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,11 @@ public class StudentController {
         numbers.add(42);
         model.addAttribute("numbers",numbers);
 
+        Student student = new Student(1,"Mike","Walker");
+        model.addAttribute("student",student);
+
         return "student/welcome";
+
+
     }
 }
