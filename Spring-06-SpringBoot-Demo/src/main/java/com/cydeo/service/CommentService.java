@@ -2,7 +2,7 @@ package com.cydeo.service;
 
 import com.cydeo.model.Comment;
 import com.cydeo.proxy.CommentNotificationProxy;
-import com.cydeo.reposetory.CommentRepository;
+import com.cydeo.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 

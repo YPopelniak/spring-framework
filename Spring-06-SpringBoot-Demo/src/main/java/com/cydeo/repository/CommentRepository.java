@@ -1,4 +1,4 @@
-package com.cydeo.reposetory;
+package com.cydeo.repository;
 
 import com.cydeo.model.Comment;
 
