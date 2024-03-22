@@ -9,5 +9,18 @@
 <h2> Welcome New Student</h2>
 <h2 th:text="${students.get(0).firstName}"></h2>
 <h2 th:text="${students.get(0).lastName}"></h2>
+
+<h2 th:text="${'Welcome ' + students.get(0).firstName}"></h2>
+
+<a th:href="@{https://cydeo.com}">Cydeo Home page</a><br>
+<a th:href="@{/student/welcome}">Link1</a><br>
+
+<a th:href="@{/student/welcome(id=3)}">Link2</a>
+
+<a th:href="@{/student/welcome(id=${students.get(0).firstName})}">Link2</a>
+
+<ul>
+    <li th:each="student : ${students}" th:text="${student.firstName}"></li>
+</ul>
 </body>
 </html>
