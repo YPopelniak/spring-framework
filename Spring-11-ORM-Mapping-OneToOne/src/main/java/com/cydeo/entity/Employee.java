@@ -20,7 +20,7 @@ public class Employee extends BaseEntity{
     private LocalDate hireDate;
     private int salary;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "department_id")
     private Departments departments;
 
