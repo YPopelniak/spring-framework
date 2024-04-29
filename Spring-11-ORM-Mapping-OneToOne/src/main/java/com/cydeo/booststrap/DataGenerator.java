@@ -2,6 +2,7 @@ package com.cydeo.booststrap;
 
 import com.cydeo.entity.Departments;
 import com.cydeo.entity.Employee;
+import com.cydeo.entity.Regions;
 import com.cydeo.enums.Gender;
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
@@ -44,12 +45,25 @@ public class DataGenerator implements CommandLineRunner {
         Departments d4 = new Departments("Phones & Tablets","Electronics");
         Departments d5 = new Departments("Computers","Electronics");
 
+        Regions r1 = new Regions("Southwest","United States");
+        Regions r2 = new Regions("Central","United States");
+        Regions r3 = new Regions("Northwest","United States");
+        Regions r4 = new Regions("Quebec'","Canada");
+        Regions r5 = new Regions("Central","Asia");
+
+
 
         e1.setDepartments(d1);
         e2.setDepartments(d2);
         e3.setDepartments(d3);
         e4.setDepartments(d4);
         e5.setDepartments(d5);
+
+        e1.setRegion(r1);
+        e2.setRegion(r2);
+        e3.setRegion(r3);
+        e4.setRegion(r4);
+        e5.setRegion(r5);
 
         employeeList.addAll(Arrays.asList(e1,e2,e3,e4,e5));
         departmentList.addAll(Arrays.asList(d1,d2,d3,d4,d5));

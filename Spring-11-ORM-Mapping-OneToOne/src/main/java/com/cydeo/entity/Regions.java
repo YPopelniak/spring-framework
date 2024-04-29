@@ -9,10 +9,16 @@ import javax.persistence.*;
 @Table(name="regions")
 @Data
 @NoArgsConstructor
-public class Regions  extends BaseEntity{
+public class Regions  extends BaseEntity {
 
-    private int region_id;
     private String region;
     private String country;
 
+    @OneToOne(mappedBy = "region")
+    private Employee employee;
+
+    public Regions(String region, String country) {
+        this.region = region;
+        this.country = country;
+    }
 }
