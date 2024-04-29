@@ -10,14 +10,18 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 public class Departments extends BaseEntity {
-    public Departments(String department, String division) {
-        this.department = department;
-        this.division = division;
-    }
 
     private String department;
 
     private String division;
+
+    @OneToOne(mappedBy = "departments")
+    private Employee employee;
+
+    public Departments(String department, String division) {
+        this.department = department;
+        this.division = division;
+    }
 
 
 }

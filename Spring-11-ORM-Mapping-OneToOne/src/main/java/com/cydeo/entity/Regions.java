@@ -1,16 +1,18 @@
 package com.cydeo.entity;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="regions")
-public class Regions {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Data
+@NoArgsConstructor
+public class Regions  extends BaseEntity{
+
     private int region_id;
-    @Column(name= "region")
     private String region;
-    @Column(name= "country")
     private String country;
 
 }
