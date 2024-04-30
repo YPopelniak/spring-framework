@@ -1,10 +1,9 @@
 package com.cydeo.booststrap;
 
-import com.cydeo.entity.Departments;
-import com.cydeo.entity.Employee;
-import com.cydeo.entity.Regions;
+import com.cydeo.model.Departments;
+import com.cydeo.model.Employee;
+import com.cydeo.model.Regions;
 import com.cydeo.enums.Gender;
-import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

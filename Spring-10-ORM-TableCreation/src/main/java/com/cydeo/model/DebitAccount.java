@@ -1,7 +1,6 @@
-package com.cydeo.entity;
+package com.cydeo.model;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.math.BigDecimal;
 @Entity
 public class DebitAccount extends Account {
