@@ -1,3 +1,4 @@
+
 package com.cydeo.model;
 
 import lombok.Data;
@@ -7,7 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="items")
+@Table(name = "items")
 @Data
 @NoArgsConstructor
 public class Item {
@@ -15,9 +16,15 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String code;
 
-    @ManyToMany(mappedBy = "items")
+    @ManyToMany(mappedBy = "itemList")
     private List<Cart> cart;
+
+    public Item(String name, String code) {
+        this.name = name;
+        this.code = code;
+    }
 }
