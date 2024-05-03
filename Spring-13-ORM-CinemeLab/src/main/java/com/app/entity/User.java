@@ -1,6 +1,6 @@
 package com.app.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,9 +12,9 @@ public class User extends BaseEntity{
 
     private String email;
     private String password;
-    private String userName;
+    private String username;
 
-    @OneToOne(fetch = FetchType.EAGER)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_details_id")
     private Account account;
 

@@ -1,8 +1,8 @@
 package com.app.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.ManyToOne;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +13,7 @@ public class Cinema extends BaseEntity{
 
     private String name;
     private String sponsoredName;
+    private String location_id;
     @ManyToOne(fetch = FetchType.LAZY)
     private Location local;
 }

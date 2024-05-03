@@ -1,7 +1,8 @@
 package com.app.entity;
 
 import com.app.enums.UserRole;
-import jakarta.persistence.*;
+import javax.persistence.*;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
