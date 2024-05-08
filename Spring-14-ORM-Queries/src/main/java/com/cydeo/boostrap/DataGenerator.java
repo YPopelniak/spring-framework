@@ -63,5 +63,11 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("findBySalaryLessThanEqual"  + employeeRepository.findBySalaryLessThanEqual(4000));
 
         System.out.println("findByHireDateBetween:" + employeeRepository.findByHireDateBetween(LocalDate.parse("2006-02-19"),LocalDate.parse("2014-06-23")));
+
+        System.out.println("getEmployeeDetail" + employeeRepository.getEmployeeDetail());
+
+        System.out.println("getEmployeeSalary : " + employeeRepository.getEmployeeSalary());
+
+        System.out.println("getEmployeeDetail" + employeeRepository.getEmployeeDetail("vmarwickm@upenn.edu"));
     }
 }
